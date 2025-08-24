@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Custom Launcher</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: url('wallpaper.jpg') center/cover no-repeat;
+      font-family: sans-serif;
+    }
+    .app-button {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 150px;
+      height: 150px;
+      border-radius: 16px;
+      background: rgba(255,255,255,0.2);
+      backdrop-filter: blur(6px);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+      cursor: pointer;
+      transition: transform 0.2s;
+    }
+    .app-button:hover {
+      transform: scale(1.05);
+    }
+    .app-button img {
+      max-width: 100px;
+      max-height: 100px;
+    }
+  </style>
+</head>
+<body>
+  <div class="app-button" onclick="openApp()">
+    <img src="icon.png" alt="App Icon" />
+  </div>
+
+  <script>
+    function openApp() {
+      // Replace with your link or local game HTML file
+      window.open("game.html", "_blank");
+    }
+  </script>
+</body>
+</html>
